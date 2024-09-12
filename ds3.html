@@ -1,0 +1,1053 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PHONE BOOK</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        header {
+            background-color: #A9A9A9;
+            color: #fff;
+            padding: 15px;
+            text-align: center;
+        }
+
+        nav {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 20px;
+            background-color: #A9A9A9;
+            padding: 10px;
+            flex-wrap: wrap;
+        }
+
+        nav a {
+            color: #fff;
+            padding: 10px 15px;
+            text-decoration: none;
+            display: block;
+            text-align: center;
+        }
+
+        nav a:hover {
+            background-color: #0056b3;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #A9A9A9;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            border-radius: 8px;
+        }
+
+        .contact-list {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .contact-list-item {
+            padding: 10px;
+            border-bottom: 1px solid #ddd;
+            margin-bottom: 5px;
+            background-color: #fff;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            border-radius: 8px;
+        }
+
+        .block1 {
+            background-color: #B0E57C; /* Light Green */
+        }
+
+        .block2 {
+            background-color: #ADD8E6; /* Light Blue */
+        }
+
+        .block3 {
+            background-color: #FFB347; /* Light Orange */
+        }
+
+        /* Unique colors for highlight */
+        .highlight1 {
+            background-color: #ffeb3b; /* Light Yellow */
+            font-weight: bold;
+        }
+
+        .highlight2 {
+            background-color: #ff9800; /* Light Orange */
+            font-weight: bold;
+        }
+
+        .highlight3 {
+            background-color: #8bc34a; /* Light Green */
+            font-weight: bold;
+        }
+
+        .section {
+            display: block;
+        }
+
+        @media (max-width: 768px) {
+            nav {
+                flex-direction: column;
+            }
+
+            nav a {
+                margin-bottom: 5px;
+            }
+        }
+
+        .search-container {
+            margin-bottom: 20px;
+        }
+
+        .search-container input[type="text"] {
+            padding: 10px;
+            font-size: 16px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        .search-container button {
+            padding: 10px 20px;
+            font-size: 16px;
+            border: none;
+            background-color: #0056b3;
+            color: #fff;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        .search-container button:hover {
+            background-color: #003d7a;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <marquee behavior="scroll" direction="left">
+            <h1 style="font-size:30px;">PHONE BOOK</h1>
+        </marquee>
+    </header>
+
+    <nav>
+        <a href="#A">A</a>
+        <a href="#B">B</a>
+        <a href="#C">C</a>
+        <a href="#D">D</a>
+        <a href="#E">E</a>
+        <a href="#F">F</a>
+        <a href="#G">G</a>
+        <a href="#H">H</a>
+        <a href="#I">I</a>
+        <a href="#J">J</a>
+        <a href="#K">K</a>
+        <a href="#L">L</a>
+        <a href="#M">M</a>
+        <a href="#N">N</a>
+        <a href="#O">O</a>
+        <a href="#P">P</a>
+        <a href="#Q">Q</a>
+        <a href="#R">R</a>
+        <a href="#S">S</a>
+        <a href="#T">T</a>
+        <a href="#U">U</a>
+        <a href="#V">V</a>
+        <a href="#W">W</a>
+        <a href="#X">X</a>
+        <a href="#Y">Y</a>
+        <a href="#Z">Z</a>
+
+    </nav>   
+
+    <div class="container">
+        <h2>Contacts</h2>
+
+        <div class="search-container">
+            <input type="text" id="nameToSearch" placeholder="Enter name to search">
+            <button onclick="jumpSearch()">Search</button>
+        </div>
+
+        <!-- A Section Contacts -->
+        <div id="A" class="section">
+            <h3>A</h3>
+            <ul class="contact-list" id="A-list">
+                <li class="contact-list-item block1">
+                    <p class="name">Alice Johnson</p>
+                    <p class="number">9123568934</p>
+                </li>
+                <li class="contact-list-item block1">
+                    <p class="name">Akshaya</p>
+                    <p class="number">9834527681</p>
+                </li>
+                <li class="contact-list-item block2">
+                    <p class="name">Anusuya</p>
+                    <p class="number">7643892310</p>
+                </li>
+                <li class="contact-list-item block2">
+                    <p class="name">Arul</p>
+                    <p class="number">9845628910</p>
+                </li>
+                <li class="contact-list-item block3">
+                    <p class="name">Archana</p>
+                    <p class="number">9823451691</p>
+                </li>
+                <li class="contact-list-item block3">
+                    <p class="name">Amir Khan</p>
+                    <p class="number">9876543210</p>
+                </li>
+            </ul>
+        </div>
+
+        <!-- B Section Contacts -->
+        <div id="B" class="section">
+            <h3>B</h3>
+            <ul class="contact-list" id="B-list">
+                <li class="contact-list-item block1">
+                    <p class="name">Bob Smith</p>
+                    <p class="number">9745267281</p>
+                </li>
+                <li class="contact-list-item block1">
+                    <p class="name">Banu</p>
+                    <p class="number">9745267282</p>
+                </li>
+                <li class="contact-list-item block2">
+                    <p class="name">Bhavana</p>
+                    <p class="number">9745267283</p>
+                </li>
+                <li class="contact-list-item block2">
+                    <p class="name">Bhuvana</p>
+                    <p class="number">9745267284</p>
+                </li>
+                <li class="contact-list-item block3">
+                    <p class="name">Basker</p>
+                    <p class="number">9745267285</p>
+                </li>
+                <li class="contact-list-item block3">
+                    <p class="name">Ben Mathews</p>
+                    <p class="number">9745267286</p>
+                </li>
+            </ul>
+        </div>
+
+
+     <!-- C Section Contacts -->
+        <div id="C" class="section">
+            <h3>C</h3>
+            <ul class="contact-list" id="C-list">
+                <li class="contact-list-item block1">
+                    <p class="name">Carlos Mendes</p>
+                    <p class="number">9745267287</p>
+                </li>
+                <li class="contact-list-item block1">
+                    <p class="name">Catherine</p>
+                    <p class="number">9745267288</p>
+                </li>
+                <li class="contact-list-item block2">
+                    <p class="name">Christine</p>
+                    <p class="number">9745267289</p>
+                </li>
+                <li class="contact-list-item block2">
+                    <p class="name">Clyde</p>
+                    <p class="number">9745267290</p>
+                </li>
+                <li class="contact-list-item block3">
+                    <p class="name">Clara</p>
+                    <p class="number">9745267291</p>
+                </li>
+                <li class="contact-list-item block3">
+                    <p class="name">Chris</p>
+                    <p class="number">9745267292</p>
+                </li>
+            </ul>
+        </div>
+
+        <!-- D Section Contacts -->
+        <div id="D" class="section">
+            <h3>D</h3>
+            <ul class="contact-list" id="D-list">
+                <li class="contact-list-item block1">
+                    <p class="name">David Brown</p>
+                    <p class="number">9745267293</p>
+                </li>
+                <li class="contact-list-item block1">
+                    <p class="name">Diana</p>
+                    <p class="number">9745267294</p>
+                </li>
+                <li class="contact-list-item block2">
+                    <p class="name">Daniel</p>
+                    <p class="number">9745267295</p>
+                </li>
+                <li class="contact-list-item block2">
+                    <p class="name">Derek</p>
+                    <p class="number">9745267296</p>
+                </li>
+                <li class="contact-list-item block3">
+                    <p class="name">Daisy</p>
+                    <p class="number">9745267297</p>
+                </li>
+                <li class="contact-list-item block3">
+                    <p class="name">Deborah</p>
+                    <p class="number">9745267298</p>
+                </li>
+            </ul>
+        </div>
+
+        <!-- E Section Contacts -->
+        <div id="E" class="section">
+            <h3>E</h3>
+            <ul class="contact-list" id="E-list">
+                <li class="contact-list-item block1">
+                    <p class="name">Edward</p>
+                    <p class="number">9745267299</p>
+                </li>
+                <li class="contact-list-item block1">
+                    <p class="name">Emma</p>
+                    <p class="number">9745267300</p>
+                </li>
+                <li class="contact-list-item block2">
+                    <p class="name">Ethan</p>
+                    <p class="number">9745267301</p>
+                </li>
+                <li class="contact-list-item block2">
+                    <p class="name">Evelyn</p>
+                    <p class="number">9745267302</p>
+                </li>
+                <li class="contact-list-item block3">
+                    <p class="name">Eric</p>
+                    <p class="number">9745267303</p>
+                </li>
+                <li class="contact-list-item block3">
+                    <p class="name">Elena</p>
+                    <p class="number">9745267304</p>
+                </li>
+            </ul>
+        </div>
+
+        <!-- F Section Contacts -->
+        <div id="F" class="section">
+            <h3>F</h3>
+            <ul class="contact-list" id="F-list">
+                <li class="contact-list-item block1">
+                    <p class="name">Fiona</p>
+                    <p class="number">9745267305</p>
+                </li>
+                <li class="contact-list-item block1">
+                    <p class="name">Frank</p>
+                    <p class="number">9745267306</p>
+                </li>
+                <li class="contact-list-item block2">
+                    <p class="name">Fred</p>
+                    <p class="number">9745267307</p>
+                </li>
+                <li class="contact-list-item block2">
+                    <p class="name">Faith</p>
+                    <p class="number">9745267308</p>
+                </li>
+                <li class="contact-list-item block3">
+                    <p class="name">Felicity</p>
+                    <p class="number">9745267309</p>
+                </li>
+                <li class="contact-list-item block3">
+                    <p class="name">Felix</p>
+                    <p class="number">9745267310</p>
+                </li>
+            </ul>
+        </div>
+
+        <!-- G Section Contacts -->
+        <div id="G" class="section">
+            <h3>G</h3>
+            <ul class="contact-list" id="G-list">
+                <li class="contact-list-item block1">
+                    <p class="name">George</p>
+                    <p class="number">9745267311</p>
+                </li>
+                <li class="contact-list-item block1">
+                    <p class="name">Grace</p>
+                    <p class="number">9745267312</p>
+                </li>
+                <li class="contact-list-item block2">
+                    <p class="name">Gina</p>
+                    <p class="number">9745267313</p>
+                </li>
+                <li class="contact-list-item block2">
+                    <p class="name">Gordon</p>
+                    <p class="number">9745267314</p>
+                </li>
+                <li class="contact-list-item block3">
+                    <p class="name">Gloria</p>
+                    <p class="number">9745267315</p>
+                </li>
+                <li class="contact-list-item block3">
+                    <p class="name">Graham</p>
+                    <p class="number">9745267316</p>
+                </li>
+            </ul>
+        </div>
+
+        <!-- H Section Contacts -->
+        <div id="H" class="section">
+            <h3>H</h3>
+            <ul class="contact-list" id="H-list">
+                <li class="contact-list-item block1">
+                    <p class="name">Hannah</p>
+                    <p class="number">9745267317</p>
+                </li>
+                <li class="contact-list-item block1">
+                    <p class="name">Harry</p>
+                    <p class="number">9745267318</p>
+                </li>
+                <li class="contact-list-item block2">
+                    <p class="name">Holly</p>
+                    <p class="number">9745267319</p>
+                </li>
+                <li class="contact-list-item block2">
+                    <p class="name">Howard</p>
+                    <p class="number">9745267320</p>
+                </li>
+                <li class="contact-list-item block3">
+                    <p class="name">Heather</p>
+                    <p class="number">9745267321</p>
+                </li>
+                <li class="contact-list-item block3">
+                    <p class="name">Hank</p>
+                    <p class="number">9745267322</p>
+                </li>
+            </ul>
+        </div>
+
+        <!-- I Section Contacts -->
+        <div id="I" class="section">
+            <h3>I</h3>
+            <ul class="contact-list" id="I-list">
+                <li class="contact-list-item block1">
+                    <p class="name">Ivy</p>
+                    <p class="number">9745267323</p>
+                </li>
+                <li class="contact-list-item block1">
+                    <p class="name">Isaac</p>
+                    <p class="number">9745267324</p>
+                </li>
+                <li class="contact-list-item block2">
+                    <p class="name">Irene</p>
+                    <p class="number">9745267325</p>
+                </li>
+                <li class="contact-list-item block2">
+                    <p class="name">Ian</p>
+                    <p class="number">9745267326</p>
+                </li>
+                <li class="contact-list-item block3">
+                    <p class="name">India</p>
+                    <p class="number">9745267327</p>
+                </li>
+                <li class="contact-list-item block3">
+                    <p class="name">Isabel</p>
+                    <p class="number">9745267328</p>
+                </li>
+            </ul>
+        </div>
+
+        <!-- J Section Contacts -->
+        <div id="J" class="section">
+            <h3>J</h3>
+            <ul class="contact-list" id="J-list">
+                <li class="contact-list-item block1">
+                    <p class="name">Jack</p>
+                    <p class="number">9745267329</p>
+                </li>
+                <li class="contact-list-item block1">
+                    <p class="name">Jill</p>
+                    <p class="number">9745267330</p>
+                </li>
+                <li class="contact-list-item block2">
+                    <p class="name">James</p>
+                    <p class="number">9745267331</p>
+                </li>
+                <li class="contact-list-item block2">
+                    <p class="name">Julia</p>
+                    <p class="number">9745267332</p>
+                </li>
+                <li class="contact-list-item block3">
+                    <p class="name">John</p>
+                    <p class="number">9745267333</p>
+                </li>
+                <li class="contact-list-item block3">
+                    <p class="name">Joan</p>
+                    <p class="number">9745267334</p>
+                </li>
+            </ul>
+        </div>
+
+        <!-- K Section Contacts -->
+        <div id="K" class="section">
+            <h3>K</h3>
+            <ul class="contact-list" id="K-list">
+                <li class="contact-list-item block1">
+                    <p class="name">Kevin</p>
+                    <p class="number">9745267335</p>
+                </li>
+                <li class="contact-list-item block1">
+                    <p class="name">Karen</p>
+                    <p class="number">9745267336</p>
+                </li>
+                <li class="contact-list-item block2">
+                    <p class="name">Kyle</p>
+                    <p class="number">9745267337</p>
+                </li>
+                <li class="contact-list-item block2">
+                    <p class="name">Kara</p>
+                    <p class="number">9745267338</p>
+                </li>
+                <li class="contact-list-item block3">
+                    <p class="name">Kurt</p>
+                    <p class="number">9745267339</p>
+                </li>
+                <li class="contact-list-item block3">
+                    <p class="name">Kelly</p>
+                    <p class="number">9745267340</p>
+                </li>
+            </ul>
+        </div>
+
+        <!-- L Section Contacts -->
+        <div id="L" class="section">
+            <h3>L</h3>
+            <ul class="contact-list" id="L-list">
+                <li class="contact-list-item block1">
+                    <p class="name">Laura</p>
+                    <p class="number">9745267341</p>
+                </li>
+                <li class="contact-list-item block1">
+                    <p class="name">Liam</p>
+                    <p class="number">9745267342</p>
+                </li>
+                <li class="contact-list-item block2">
+                    <p class="name">Linda</p>
+                    <p class="number">9745267343</p>
+                </li>
+                <li class="contact-list-item block2">
+                    <p class="name">Louis</p>
+                    <p class="number">9745267344</p>
+                </li>
+                <li class="contact-list-item block3">
+                    <p class="name">Lily</p>
+                    <p class="number">9745267345</p>
+                </li>
+                <li class="contact-list-item block3">
+                    <p class="name">Leo</p>
+                    <p class="number">9745267346</p>
+                </li>
+            </ul>
+        </div>
+
+        <!-- M Section Contacts -->
+        <div id="M" class="section">
+            <h3>M</h3>
+            <ul class="contact-list" id="M-list">
+                <li class="contact-list-item block1">
+                    <p class="name">Mia</p>
+                    <p class="number">9745267347</p>
+                </li>
+                <li class="contact-list-item block1">
+                    <p class="name">Michael</p>
+                    <p class="number">9745267348</p>
+                </li>
+                <li class="contact-list-item block2">
+                    <p class="name">Megan</p>
+                    <p class="number">9745267349</p>
+                </li>
+                <li class="contact-list-item block2">
+                    <p class="name">Matthew</p>
+                    <p class="number">9745267350</p>
+                </li>
+                <li class="contact-list-item block3">
+                    <p class="name">Mary</p>
+                    <p class="number">9745267351</p>
+                </li>
+                <li class="contact-list-item block3">
+                    <p class="name">Mark</p>
+                    <p class="number">9745267352</p>
+                </li>
+            </ul>
+        </div>
+
+        <!-- N Section Contacts -->
+        <div id="N" class="section">
+            <h3>N</h3>
+            <ul class="contact-list" id="N-list">
+                <li class="contact-list-item block1">
+                    <p class="name">Nancy</p>
+                    <p class="number">9745267353</p>
+                </li>
+                <li class="contact-list-item block1">
+                    <p class="name">Nathan</p>
+                    <p class="number">9745267354</p>
+                </li>
+                <li class="contact-list-item block2">
+                    <p class="name">Nina</p>
+                    <p class="number">9745267355</p>
+                </li>
+                <li class="contact-list-item block2">
+                    <p class="name">Neil</p>
+                    <p class="number">9745267356</p>
+                </li>
+                <li class="contact-list-item block3">
+                    <p class="name">Noah</p>
+                    <p class="number">9745267357</p>
+                </li>
+                <li class="contact-list-item block3">
+                    <p class="name">Nora</p>
+                    <p class="number">9745267358</p>
+                </li>
+            </ul>
+        </div>
+
+        <!-- O Section Contacts -->
+        <div id="O" class="section">
+            <h3>O</h3>
+            <ul class="contact-list" id="O-list">
+                <li class="contact-list-item block1">
+                    <p class="name">Olivia</p>
+                    <p class="number">9745267359</p>
+                </li>
+                <li class="contact-list-item block1">
+                    <p class="name">Oscar</p>
+                    <p class="number">9745267360</p>
+                </li>
+                <li class="contact-list-item block2">
+                    <p class="name">Oliver</p>
+                    <p class="number">9745267361</p>
+                </li>
+                <li class="contact-list-item block2">
+                    <p class="name">Owen</p>
+                    <p class="number">9745267362</p>
+                </li>
+                <li class="contact-list-item block3">
+                    <p class="name">Opal</p>
+                    <p class="number">9745267363</p>
+                </li>
+                <li class="contact-list-item block3">
+                    <p class="name">Orlando</p>
+                    <p class="number">9745267364</p>
+                </li>
+            </ul>
+        </div>
+
+        <!-- P Section Contacts -->
+        <div id="P" class="section">
+            <h3>P</h3>
+            <ul class="contact-list" id="P-list">
+                <li class="contact-list-item block1">
+                    <p class="name">Paul</p>
+                    <p class="number">9745267365</p>
+                </li>
+                <li class="contact-list-item block1">
+                    <p class="name">Patricia</p>
+                    <p class="number">9745267366</p>
+                </li>
+                <li class="contact-list-item block2">
+                    <p class="name">Peter</p>
+                    <p class="number">9745267367</p>
+                </li>
+                <li class="contact-list-item block2">
+                    <p class="name">Pamela</p>
+                    <p class="number">9745267368</p>
+                </li>
+                <li class="contact-list-item block3">
+                    <p class="name">Patrick</p>
+                    <p class="number">9745267369</p>
+                </li>
+                <li class="contact-list-item block3">
+                    <p class="name">Paula</p>
+                    <p class="number">9745267370</p>
+                </li>
+            </ul>
+        </div>
+
+        <!-- Q Section Contacts -->
+        <div id="Q" class="section">
+            <h3>Q</h3>
+            <ul class="contact-list" id="Q-list">
+                <li class="contact-list-item block1">
+                    <p class="name">Quinn</p>
+                    <p class="number">9745267371</p>
+                </li>
+                <li class="contact-list-item block1">
+                    <p class="name">Quincy</p>
+                    <p class="number">9745267372</p>
+                </li>
+                <li class="contact-list-item block2">
+                    <p class="name">Quinn</p>
+                    <p class="number">9745267373</p>
+                </li>
+                <li class="contact-list-item block2">
+                    <p class="name">Qin</p>
+                    <p class="number">9745267374</p>
+                </li>
+                <li class="contact-list-item block3">
+                    <p class="name">Quinn</p>
+                    <p class="number">9745267375</p>
+                </li>
+                <li class="contact-list-item block3">
+                    <p class="name">Quinn</p>
+                    <p class="number">9745267376</p>
+                </li>
+            </ul>
+        </div>
+
+        <!-- R Section Contacts -->
+        <div id="R" class="section">
+            <h3>R</h3>
+            <ul class="contact-list" id="R-list">
+                <li class="contact-list-item block1">
+                    <p class="name">Rachel</p>
+                    <p class="number">9745267377</p>
+                </li>
+                <li class="contact-list-item block1">
+                    <p class="name">Robert</p>
+                    <p class="number">9745267378</p>
+                </li>
+                <li class="contact-list-item block2">
+                    <p class="name">Rebecca</p>
+                    <p class="number">9745267379</p>
+                </li>
+                <li class="contact-list-item block2">
+                    <p class="name">Randy</p>
+                    <p class="number">9745267380</p>
+                </li>
+                <li class="contact-list-item block3">
+                    <p class="name">Ryan</p>
+                    <p class="number">9745267381</p>
+                </li>
+                <li class="contact-list-item block3">
+                    <p class="name">Riley</p>
+                    <p class="number">9745267382</p>
+                </li>
+            </ul>
+        </div>
+
+        <!-- S Section Contacts -->
+        <div id="S" class="section">
+            <h3>S</h3>
+            <ul class="contact-list" id="S-list">
+                <li class="contact-list-item block1">
+                    <p class="name">Sarah</p>
+                    <p class="number">9745267383</p>
+                </li>
+                <li class="contact-list-item block1">
+                    <p class="name">Steve</p>
+                    <p class="number">9745267384</p>
+                </li>
+                <li class="contact-list-item block2">
+                    <p class="name">Susan</p>
+                    <p class="number">9745267385</p>
+                </li>
+                <li class="contact-list-item block2">
+                    <p class="name">Sam</p>
+                    <p class="number">9745267386</p>
+                </li>
+                <li class="contact-list-item block3">
+                    <p class="name">Sophie</p>
+                    <p class="number">9745267387</p>
+                </li>
+                <li class="contact-list-item block3">
+                    <p class="name">Sean</p>
+                    <p class="number">9745267388</p>
+                </li>
+            </ul>
+        </div>
+
+        <!-- T Section Contacts -->
+        <div id="T" class="section">
+            <h3>T</h3>
+            <ul class="contact-list" id="T-list">
+                <li class="contact-list-item block1">
+                    <p class="name">Thomas</p>
+                    <p class="number">9745267389</p>
+                </li>
+                <li class="contact-list-item block1">
+                    <p class="name">Tina</p>
+                    <p class="number">9745267390</p>
+                </li>
+                <li class="contact-list-item block2">
+                    <p class="name">Terry</p>
+                    <p class="number">9745267391</p>
+                </li>
+                <li class="contact-list-item block2">
+                    <p class="name">Tanya</p>
+                    <p class="number">9745267392</p>
+                </li>
+                <li class="contact-list-item block3">
+                    <p class="name">Travis</p>
+                    <p class="number">9745267393</p>
+                </li>
+                <li class="contact-list-item block3">
+                    <p class="name">Tara</p>
+                    <p class="number">9745267394</p>
+                </li>
+            </ul>
+        </div>
+
+        <!-- U Section Contacts -->
+        <div id="U" class="section">
+            <h3>U</h3>
+            <ul class="contact-list" id="U-list">
+                <li class="contact-list-item block1">
+                    <p class="name">Ursula</p>
+                    <p class="number">9745267395</p>
+                </li>
+                <li class="contact-list-item block1">
+                    <p class="name">Ulysses</p>
+                    <p class="number">9745267396</p>
+                </li>
+                <li class="contact-list-item block2">
+                    <p class="name">Upton</p>
+                    <p class="number">9745267397</p>
+                </li>
+                <li class="contact-list-item block2">
+                    <p class="name">Usha</p>
+                    <p class="number">9745267398</p>
+                </li>
+                <li class="contact-list-item block3">
+                    <p class="name">Una</p>
+                    <p class="number">9745267399</p>
+                </li>
+                <li class="contact-list-item block3">
+                    <p class="name">Uriah</p>
+                    <p class="number">9745267400</p>
+                </li>
+            </ul>
+        </div>
+
+        <!-- V Section Contacts -->
+        <div id="V" class="section">
+            <h3>V</h3>
+            <ul class="contact-list" id="V-list">
+                <li class="contact-list-item block1">
+                    <p class="name">Victoria</p>
+                    <p class="number">9745267401</p>
+                </li>
+                <li class="contact-list-item block1">
+                    <p class="name">Victor</p>
+                    <p class="number">9745267402</p>
+                </li>
+                <li class="contact-list-item block2">
+                    <p class="name">Vera</p>
+                    <p class="number">9745267403</p>
+                </li>
+                <li class="contact-list-item block2">
+                    <p class="name">Vince</p>
+                    <p class="number">9745267404</p>
+                </li>
+                <li class="contact-list-item block3">
+                    <p class="name">Vanessa</p>
+                    <p class="number">9745267405</p>
+                </li>
+                <li class="contact-list-item block3">
+                    <p class="name">Vernon</p>
+                    <p class="number">9745267406</p>
+                </li>
+            </ul>
+        </div>
+
+        <!-- W Section Contacts -->
+        <div id="W" class="section">
+            <h3>W</h3>
+            <ul class="contact-list" id="W-list">
+                <li class="contact-list-item block1">
+                    <p class="name">William</p>
+                    <p class="number">9745267407</p>
+                </li>
+                <li class="contact-list-item block1">
+                    <p class="name">Wendy</p>
+                    <p class="number">9745267408</p>
+                </li>
+                <li class="contact-list-item block2">
+                    <p class="name">Walter</p>
+                    <p class="number">9745267409</p>
+                </li>
+                <li class="contact-list-item block2">
+                    <p class="name">Willa</p>
+                    <p class="number">9745267410</p>
+                </li>
+                <li class="contact-list-item block3">
+                    <p class="name">Willow</p>
+                    <p class="number">9745267411</p>
+                </li>
+                <li class="contact-list-item block3">
+                    <p class="name">Wesley</p>
+                    <p class="number">9745267412</p>
+                </li>
+            </ul>
+        </div>
+
+        <!-- X Section Contacts -->
+        <div id="X" class="section">
+            <h3>X</h3>
+            <ul class="contact-list" id="X-list">
+                <li class="contact-list-item block1">
+                    <p class="name">Xander</p>
+                    <p class="number">9745267413</p>
+                </li>
+                <li class="contact-list-item block1">
+                    <p class="name">Xena</p>
+                    <p class="number">9745267414</p>
+                </li>
+                <li class="contact-list-item block2">
+                    <p class="name">Xavier</p>
+                    <p class="number">9745267415</p>
+                </li>
+                <li class="contact-list-item block2">
+                    <p class="name">Xander</p>
+                    <p class="number">9745267416</p>
+                </li>
+                <li class="contact-list-item block3">
+                    <p class="name">Xander</p>
+                    <p class="number">9745267417</p>
+                </li>
+                <li class="contact-list-item block3">
+                    <p class="name">Xena</p>
+                    <p class="number">9745267418</p>
+                </li>
+            </ul>
+        </div>
+
+        <!-- Y Section Contacts -->
+        <div id="Y" class="section">
+            <h3>Y</h3>
+            <ul class="contact-list" id="Y-list">
+                <li class="contact-list-item block1">
+                    <p class="name">Yara</p>
+                    <p class="number">9745267419</p>
+                </li>
+                <li class="contact-list-item block1">
+                    <p class="name">Yvonne</p>
+                    <p class="number">9745267420</p>
+                </li>
+                <li class="contact-list-item block2">
+                    <p class="name">Yasmine</p>
+                    <p class="number">9745267421</p>
+                </li>
+                <li class="contact-list-item block2">
+                    <p class="name">Yuri</p>
+                    <p class="number">9745267422</p>
+                </li>
+                <li class="contact-list-item block3">
+                    <p class="name">Yvette</p>
+                    <p class="number">9745267423</p>
+                </li>
+                <li class="contact-list-item block3">
+                    <p class="name">Yosef</p>
+                    <p class="number">9745267424</p>
+                </li>
+            </ul>
+        </div>
+
+        <!-- Z Section Contacts -->
+        <div id="Z" class="section">
+            <h3>Z</h3>
+            <ul class="contact-list" id="Z-list">
+                <li class="contact-list-item block1">
+                    <p class="name">Zara</p>
+                    <p class="number">9745267425</p>
+                </li>
+                <li class="contact-list-item block1">
+                    <p class="name">Zane</p>
+                    <p class="number">9745267426</p>
+                </li>
+                <li class="contact-list-item block2">
+                    <p class="name">Zelda</p>
+                    <p class="number">9745267427</p>
+                </li>
+                <li class="contact-list-item block2">
+                    <p class="name">Zach</p>
+                    <p class="number">9745267428</p>
+                </li>
+                <li class="contact-list-item block3">
+                    <p class="name">Zane</p>
+                    <p class="number">9745267429</p>
+                </li>
+                <li class="contact-list-item block3">
+                    <p class="name">Zara</p>
+                    <p class="number">9745267430</p>
+                </li>
+            </ul>
+        </div>
+
+    </div>
+
+
+    <script>
+        function jumpSearch() {
+            const nameToSearch = document.getElementById('nameToSearch').value.toLowerCase().trim();
+            if (!nameToSearch) {
+                alert('Please enter a name to search.');
+                return;
+            }
+
+            // Clear previous highlights
+            document.querySelectorAll('.contact-list-item').forEach(item => {
+                item.classList.remove('highlight1', 'highlight2', 'highlight3');
+            });
+
+            // Helper function for Jump Search
+            function jumpSearchInList(list, target) {
+                const n = list.length;
+                let step = Math.floor(Math.sqrt(n));
+                let prev = 0;
+
+                // Jump in blocks
+                while (list[Math.min(step, n) - 1].name.toLowerCase() < target) {
+                    prev = step;
+                    step += Math.floor(Math.sqrt(n));
+                    if (prev >= n) return -1;  // Target not found
+                }
+
+                // Linear search within block
+                while (list[prev].name.toLowerCase() < target) {
+                    prev++;
+                    if (prev === Math.min(step, n)) return -1;  // Target not found
+                }
+
+                if (list[prev].name.toLowerCase() === target) return prev; // Target found
+                return -1; // Target not found
+            }
+
+            // Search within sections
+            const sections = ['A-list', 'B-list', 'C-list', 'D-list', 'E-list', 'F-list', 'G-list', 'H-list', 'I-list', 'J-list', 'K-list', 'L-list', 'M-list', 'N-list', 'O-list', 'P-list', 'Q-list', 'R-list', 'S-list', 'T-list', 'U-list', 'V-list', 'W-list', 'X-list', 'Y-list', 'Z-list' ]; // Add more section IDs as needed
+            let found = false;
+
+            for (const section of sections) {
+                const contactItems = document.querySelectorAll(`#${section} .contact-list-item`);
+                const contactArray = Array.from(contactItems).map(item => ({
+                    name: item.querySelector('.name').textContent.trim(),
+                    element: item
+                }));
+
+                contactArray.forEach((contact, index) => {
+                    if (contact.name.toLowerCase().includes(nameToSearch)) {
+                        // Apply different highlight classes for each match
+                        const highlightClass = `highlight${(index % 3) + 1}`;
+                        contact.element.classList.add(highlightClass);
+                        found = true;
+                    }
+                });
+            }
+
+            if (!found) {
+                alert('Name not found.');
+            }
+        }
+    </script>
+</body>
+</html>
